@@ -13,19 +13,11 @@ object Problem1 {
 
 
   def main(args: Array[String]) {
-    println(sum(sumDivisibleByN(1000, 5)))
-    println(sum(sumDivisibleByN(1000, 3)))
-    println(sum(sumDivisibleByN(1000, 15)))
-    println(sum(sumDivisibleByN(1000, 3)) + sum(sumDivisibleByN(1000, 5) - sum(sumDivisibleByN(1000, 15))))
-    
-    var summe = 0;
-    for(i <- 1 to 1000){
-        if (i % 15 == 0){
-          summe += i;
-        }
-    }
-    
-    println(summe)
+    val sum3 = sum(sumDivisibleByN(1000,3))
+    val sum5 = sum(sumDivisibleByN(1000,5))
+    val sum15 = sum(sumDivisibleByN(1000,15))
+
+    println(sum3+sum5-sum15)
   }
 
 }
