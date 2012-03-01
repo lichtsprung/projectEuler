@@ -1,4 +1,4 @@
-package projectEuler
+package projectEuler.problems
 
 /**
  * If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
@@ -16,7 +16,8 @@ object Problem1 {
   }
 
 
-  def solve = {
+  def solve {
+    println("=========================================================================================================")
     println("Problem 1: \n" +
       "If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.\n  " +
       "Find the sum of all the multiples of 3 or 5 below 1000.\n")
@@ -25,5 +26,6 @@ object Problem1 {
     val sum15 = sum(sumDivisibleByN(1000, 15))
     print("Solution: ")
     println(sum3 + sum5 - sum15)
+    println("=========================================================================================================")
   }
 }
